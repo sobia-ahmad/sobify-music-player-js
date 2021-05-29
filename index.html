@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobify Player</title>
+  <script src="https://kit.fontawesome.com/e0d2e82281.js" crossorigin="anonymous"></script><div id="overlay"></div>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Placeholder text for the classes below which I will make dynamic later-->
+  <header>
+    <img src="./images/sobify-black-bg.jpg" alt="sobify-logo" class="sobify-logo">
+  </header>
+    <div class="music-player-container">
+    <div class="player">
+    <div class="track-summary">
+      <div class="track-currently-playing">Currently playing track x of y</div>
+      <div class="track-cover" style="background-image: url('./images/song-1.jpg');"></div>
+
+      <img src="./images/track1-album-cover.jpg" alt="track-cover" class="track-image">
+    </div>
+      <div class="track-title"><h1>Ghost Town</h1></div>
+      <div class="track-artist"><h2>Vancouver Sleep Clinic</h2></div>
+      <div class="track-album-title"><h2>Onwards to Zion</h2></div>
+      <div class="buttons">
+        <div class="prev-track-button" onclick="prevTrack()"><i class="fas fa-backward fa-2x"></i></div>
+        <div class="play-pause-track-button" onclick="playpauseTrack()"><i class="fa fa-play fa-3x"></i></div>
+        <div class="next-track-button" onclick="nextTrack()"><i class="fas fa-forward fa-2x"></i></div>
+      </div>
+      <div class="control-select-slider">
+        <div class="current-time">00:00</div>
+        <input type="range" min="1" max="100" value="0" class="control-select-slider" onchange="seekTo()">
+        <div class="total-duration">00:00</div>
+      </div>
+      <div class="volume-slider">
+        <i class="fa fa-volume-down"></i>
+        <input type="range" min="1" max="100" value="100" class="volume-slider" onchange="setVolume()">
+        <i class="fa fa-volume-up"></i>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="app.js"></script>
+</body>
+</html>
